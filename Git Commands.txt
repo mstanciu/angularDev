@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "mesaj"
+git remote add origin "urlu meu"
+git remote -v
+git push -f origin master
