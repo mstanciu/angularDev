@@ -1,20 +1,20 @@
+
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule}  from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import {HttpModule} from '@angular/http';
-import {FormsModule} from '@angular/forms';
-import {AppRoutingModule} from './app-routing.module';
+import { Http } from '@angular/http';
+import { HttpModule } from '@angular/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AuthComponent,
     LoginComponent,
     RegisterComponent
   ],
