@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output ,EventEmitter} from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { LoginComponent } from '../auth/login/login.component';
 import { AuthService } from '../auth/authService';
@@ -12,16 +12,22 @@ import { AuthService } from '../auth/authService';
 export class HeaderComponent implements OnInit {
 
   constructor(private auth: AuthService) {
-    
   }
 
   ngOnInit() {
-    if(this.auth.isLoggedIn){
-      
-    }
-    else {
-
-    }
+    console.log(this.auth.isLoggedIn + ' ceva');
   }
 
+  isLoggedIn() {
+    console.log('>>>>>> ' + this.auth.isLoggedIn);
+    return this.auth.isLoggedIn;
+  }
+
+  isLoggedOut() {
+    return !this.auth.isLoggedIn;
+  }
+
+  logout() {
+    this.auth.isLoggedIn = false;
+  }
 }

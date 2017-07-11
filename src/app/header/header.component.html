@@ -12,12 +12,15 @@
           <li><a routerLinkActive="active" >Tennis</a></li>
         </ul>
       </li>
-      <li><a routerLinkActive="active" routerLink="friends" >Friends</a></li>
-      <li><a routerLinkActive="active" routerLink="settings" disabled >Settings <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
+      <li *ngIf="isLoggedIn()"><a routerLinkActive="active" routerLink="friends" >Friends</a></li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
+    <ul class="nav navbar-nav navbar-right" *ngIf="isLoggedOut()">
         <li><a routerLinkActive="active" routerLink="register" >Register</a></li>
         <li><a routerLinkActive="active" routerLink="login">Login <span class="glyphicon glyphicon-log-in"></span></a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right" *ngIf="isLoggedIn()">
+        <li *ngIf="isLoggedIn()"><a routerLinkActive="active" routerLink="settings" >Settings <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
+        <li><a routerLinkActive="active" routerLink="login" (click)="logout()" >Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
     </ul>
   </div>
 </nav>

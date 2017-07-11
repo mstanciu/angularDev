@@ -1,5 +1,5 @@
 
-import { OnInit } from '@angular/core';
+import { OnInit, Input} from '@angular/core';
 
 export class AuthService implements OnInit {
 
@@ -10,4 +10,5 @@ export class AuthService implements OnInit {
     ngOnInit() {
 
     }
+
 }
