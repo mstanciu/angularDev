@@ -12,12 +12,9 @@
           class="form-control"
           name="firstName"
           ngModel
-          #fn
+          #firstName="ngModel"
           >
         </div>
-        <span class="help-block form-group" *ngIf>
-          Only letters!
-        </span>
         <div class="form-group">
           <input 
           type="text" 
@@ -25,6 +22,7 @@
           class="form-control"
           name = "lastName"
           ngModel
+          #lastName = "ngModel"
           >
         </div>
         <div class="form-group">

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { FormGroup }  from '@angular/forms'
 
@@ -8,10 +8,17 @@ import { FormGroup }  from '@angular/forms'
   styleUrls: ['./settings.component.css']
 })
 export class SettingsComponent implements OnInit {
+
+  @ViewChild('f') settings: NgForm;
+
   genders = ['Male', 'Female'];
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSubmit() {
+    console.log(this.settings);
   }
 
 }
