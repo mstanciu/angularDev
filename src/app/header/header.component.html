@@ -1,19 +1,19 @@
 <nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
-      <a routerLinkActive="active" class="navbar-brand">SportsEvent</a>
+      <a routerLinkActive="active" class="navbar-brand" routerLink="/">SportsEvent</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+        <a class="dropdown-toggle" data-toggle="dropdown" routerLink="events">Events<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a routerLinkActive="active" >All</a></li>
           <li><a routerLinkActive="active" >Football</a></li>
           <li><a routerLinkActive="active" >Tennis</a></li>
         </ul>
       </li>
-      <li><a routerLinkActive="active" >Friends</a></li>
-      <li><a routerLinkActive="active" >Settings <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
+      <li><a routerLinkActive="active" routerLink="friends" >Friends</a></li>
+      <li><a routerLinkActive="active" routerLink="settings" disabled >Settings <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></a></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
         <li><a routerLinkActive="active" routerLink="register" >Register</a></li>

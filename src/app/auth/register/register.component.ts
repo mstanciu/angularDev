@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from "@angular/forms";
+import { FormGroup }  from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -8,8 +9,9 @@ import { NgForm } from "@angular/forms";
 })
 export class RegisterComponent implements OnInit {
   @ViewChild('f') signUp: NgForm;
+  signUpGroup: FormGroup;
   answer = '';
-  genders = ['male','female'];
+  genders = ['Male','Female'];
 
   constructor() { }
 
@@ -18,9 +20,17 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    //console.log('submitted');
-    //console.log(form.value);
-    console.log(this.signUp);
-  }
+    // console.log(this.signUp.value.userData);
+    console.log(form);
+    this.signUp.reset();
 
+  }
+}
+
+class User {
+  private email: string;
+  private password: string;
+  private secretQ: string;
+  private secretA: string;
+  private gender: string;
 }
